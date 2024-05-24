@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main className="min-h-screen w-full  bg-zinc-900 p-4 text-zinc-100 ">
-      <h1 className="flex items-center gap-2 text-4xl font-extrabold before:h-8 before:w-1 before:rounded-full before:bg-violet-500">
+      <h1 className="flex items-center gap-2 text-3xl font-extrabold before:h-8 before:w-1 before:rounded-full before:bg-violet-500 sm:text-4xl lg:text-5xl">
         Hello World
       </h1>
 
