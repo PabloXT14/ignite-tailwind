@@ -8,8 +8,8 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      maxWidth: {
-        app: '800px',
+      gridTemplateColumns: {
+        app: 'minmax(18rem, 20rem) 1fr',
       },
     },
   },
