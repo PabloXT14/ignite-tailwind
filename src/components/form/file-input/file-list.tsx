@@ -3,12 +3,14 @@
 import { LuTrash2, LuUploadCloud } from 'react-icons/lu'
 import { useFileInput } from './root'
 import { formatBytes } from '@/utils/format-bytes'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 export const FileList = () => {
   const { files } = useFileInput()
+  const [parent] = useAutoAnimate()
 
   return (
-    <div className="mt-4 space-y-3">
+    <div ref={parent} className="mt-4 space-y-3">
       {files.map((file) => {
         return (
           <div
