@@ -1,9 +1,17 @@
 import { SettingsTabs } from '@/components/settings-tabs'
 import * as Input from '@/components/input'
-import { LuMail } from 'react-icons/lu'
+import {
+  LuBold,
+  LuItalic,
+  LuLink,
+  LuList,
+  LuListOrdered,
+  LuMail,
+} from 'react-icons/lu'
 import * as FileInput from '@/components/form/file-input'
 import { Select } from '@/components/form/select'
 import { SelectItem } from '@/components/form/select/select-item'
+import { Textarea } from '@/components/form/textarea'
 
 export default function Home() {
   return (
@@ -143,7 +151,68 @@ export default function Home() {
                 Write a short introduction.
               </span>
             </label>
-            <div />
+            <div className="space-y-3">
+              {/* Header */}
+              <div className="grid grid-cols-2 gap-3">
+                <Select placeholder="" defaultValue="normal">
+                  <SelectItem
+                    value="normal"
+                    text="Normal Text"
+                    defaultChecked
+                  />
+                  <SelectItem value="md" text="Markdown" />
+                </Select>
+
+                <div className="flex items-center gap-1">
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <LuBold className="size-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <LuItalic
+                      className="size-4 text-zinc-500"
+                      strokeWidth={3}
+                    />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <LuLink className="size-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <LuList className="size-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <LuListOrdered
+                      className="size-4 text-zinc-500"
+                      strokeWidth={3}
+                    />
+                  </button>
+                </div>
+              </div>
+
+              {/* Content */}
+              <Textarea
+                id="bio"
+                defaultValue="I'm a Product Designer based in Melbourne, Australia. I specialise in UX/UI design, brand strategy, and Webflow development."
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
