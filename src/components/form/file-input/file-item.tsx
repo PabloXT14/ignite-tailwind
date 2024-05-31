@@ -1,21 +1,46 @@
 import { Button } from '@/components/button'
 import { formatBytes } from '@/utils/format-bytes'
 import { LuCheckCircle2, LuTrash2, LuUploadCloud } from 'react-icons/lu'
+import { VariantProps, tv } from 'tailwind-variants'
 
-export type FileItemProps = {
+const fileItemStyles = tv({
+  slots: {
+    container:
+      'group flex items-start gap-4 rounded-lg border border-zinc-200 p-4',
+    icon: 'rounded-full border-4 border-violet-100 bg-violet-200 p-2 text-violet-600',
+    deleteButton: '',
+  },
+  variants: {
+    state: {
+      progress: {
+        container: '',
+      },
+      complete: {
+        container: 'border-violet-500',
+      },
+      error: {
+        container: 'bg-error-25 border-error-300',
+        icon: 'border-error-50 bg-error-100 text-error-600',
+        deleteButton: 'text-error-700 hover:text-error-900',
+      },
+    },
+  },
+  defaultVariants: {
+    state: 'progress',
+  },
+})
+
+export type FileItemProps = VariantProps<typeof fileItemStyles> & {
   name: string
   size: number
 }
 
-export const FileItem = ({ name, size }: FileItemProps) => {
-  const state = 'progress' as 'progress' | 'error' | 'complete'
+export const FileItem = ({ name, size, state }: FileItemProps) => {
+  const { container, icon, deleteButton } = fileItemStyles({ state })
 
   return (
-    <div
-      key={name}
-      className="group flex items-start gap-4 rounded-lg border border-zinc-200 p-4"
-    >
-      <div className="rounded-full border-4 border-violet-100 bg-violet-200 p-2 text-violet-600">
+    <div className={container()}>
+      <div className={icon()}>
         <LuUploadCloud className="size-4" />
       </div>
 
@@ -61,8 +86,8 @@ export const FileItem = ({ name, size }: FileItemProps) => {
       {state === 'complete' ? (
         <LuCheckCircle2 className="size-5 fill-violet-600 text-white" />
       ) : (
-        <Button type="button" variant="ghost">
-          <LuTrash2 className="size-5 text-zinc-500" />
+        <Button type="button" variant="ghost" className={deleteButton()}>
+          <LuTrash2 className="size-5" />
         </Button>
       )}
     </div>
