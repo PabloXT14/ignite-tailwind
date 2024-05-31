@@ -1,4 +1,5 @@
 import { LuLogOut } from 'react-icons/lu'
+import { Button } from '../button'
 
 export const Profile = () => {
   return (
@@ -8,7 +9,6 @@ export const Profile = () => {
         alt=""
         className="size-10 rounded-full"
       />
-
       <div className="flex flex-col truncate">
         <span className="truncate text-sm font-semibold text-zinc-700">
           Pablo Alan
@@ -17,10 +17,9 @@ export const Profile = () => {
           pabloxt14@gmail.com
         </span>
       </div>
-
-      <button type="button" className="ml-auto rounded-md p-2 hover:bg-zinc-50">
+      <Button type="button" variant="ghost" className="ml-auto">
         <LuLogOut className="size-5 text-zinc-500" />
-      </button>
+      </Button>
     </div>
   )
 }

@@ -4,6 +4,7 @@ import { LuTrash2, LuUploadCloud } from 'react-icons/lu'
 import { useFileInput } from './root'
 import { formatBytes } from '@/utils/format-bytes'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
+import { Button } from '@/components/button'
 
 export const FileList = () => {
   const { files } = useFileInput()
@@ -39,12 +40,9 @@ export const FileList = () => {
               </div>
             </div>
 
-            <button
-              type="button"
-              className="ml-auto rounded-md p-2 hover:bg-zinc-50"
-            >
+            <Button type="button" variant="ghost">
               <LuTrash2 className="size-5 text-zinc-500" />
-            </button>
+            </Button>
           </div>
         )
       })}

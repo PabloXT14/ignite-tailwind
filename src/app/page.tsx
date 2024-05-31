@@ -158,46 +158,31 @@ export default function Home() {
                 </Select>
 
                 <div className="flex items-center gap-1">
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
+                  <Button type="button" variant="ghost">
                     <LuBold className="size-4 text-zinc-500" strokeWidth={3} />
-                  </button>
+                  </Button>
 
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
+                  <Button type="button" variant="ghost">
                     <LuItalic
                       className="size-4 text-zinc-500"
                       strokeWidth={3}
                     />
-                  </button>
+                  </Button>
 
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
+                  <Button type="button" variant="ghost">
                     <LuLink className="size-4 text-zinc-500" strokeWidth={3} />
-                  </button>
+                  </Button>
 
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
+                  <Button type="button" variant="ghost">
                     <LuList className="size-4 text-zinc-500" strokeWidth={3} />
-                  </button>
+                  </Button>
 
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
+                  <Button type="button" variant="ghost">
                     <LuListOrdered
                       className="size-4 text-zinc-500"
                       strokeWidth={3}
                     />
-                  </button>
+                  </Button>
                 </div>
               </div>
 
