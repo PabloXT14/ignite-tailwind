@@ -5,3 +5,15 @@
 html {
   @apply antialiased;
 }
+
+*::-webkit-scrollbar {
+  @apply w-1 h-1;
+}
+
+*::-webkit-scrollbar-track {
+  @apply bg-white/0 border-none;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-zinc-200 rounded-full cursor-move;
+}
