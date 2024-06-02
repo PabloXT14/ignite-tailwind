@@ -15,5 +15,5 @@ html {
 }
 
 *::-webkit-scrollbar-thumb {
-  @apply bg-zinc-200 rounded-full cursor-move;
+  @apply bg-zinc-400 rounded-full cursor-move;
 }
