@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { LuLogOut } from 'react-icons/lu'
 import { Button } from '../button'
 
@@ -10,10 +11,10 @@ export const Profile = () => {
         className="size-10 rounded-full"
       />
       <div className="flex flex-col truncate">
-        <span className="truncate text-sm font-semibold text-zinc-700">
+        <span className="truncate text-sm font-semibold text-zinc-700 dark:text-zinc-100">
           Pablo Alan
         </span>
-        <span className="truncate text-sm text-zinc-500">
+        <span className="truncate text-sm text-zinc-500 dark:text-zinc-400">
           pabloxt14@gmail.com
         </span>
       </div>
